@@ -158,6 +158,7 @@ hr{
     font-weight:400;
     font-size:1.2rem;
     padding:2px 3px;
+    text-decoration: none;
 }
 `
 export default RecipeDetail

@@ -6,7 +6,7 @@ function RecipeComponent(props) {
 
     return (
         <Wrapper>
-            <Link to={`/${encodeURIComponent(props.recipe.uri)}`}>
+            <Link to={`/${encodeURIComponent(props.recipe.uri)}`} className='router-link'>
                 <img src={props.recipe.image} alt='' className='recipe-image'></img>
                 <h1 className='recipe-title'>{props.recipe.label.toLowerCase()}</h1>
             </Link>
@@ -26,10 +26,15 @@ const Wrapper = styled.div`
     overflow:hidden;
     &:hover .recipe-image {
     transform:scale(1.05);
+    
   }
   &:hover .recipe-title {
     color:tomato;
   }
+
+.router-link {
+    text-decoration:none;
+}
 
 img {
     transition: all 0.3s ease-in;
